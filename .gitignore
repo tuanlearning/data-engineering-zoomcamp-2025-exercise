@@ -42,3 +42,5 @@ terraform.rc
 *.json
 
 .ipynb_checkpoints
+
+variables.tf
