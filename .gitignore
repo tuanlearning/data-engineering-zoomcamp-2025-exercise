@@ -44,3 +44,5 @@ terraform.rc
 .ipynb_checkpoints
 
 variables.tf
+
+*.env

@@ -52,8 +52,8 @@ services:
           server:
             basicAuth:
               enabled: true
-              username: "tuanlearning198@gmail.com" # it must be a valid email address
-              password: iamtuan12
+              username: "$KESTRA_USERNAME" # it must be a valid email address
+              password: "$KESTRA_PASSWORD"
           repository:
             type: postgres
           storage:
@@ -64,7 +64,7 @@ services:
             gcs:
               bucket: kestra_internal_storage
               project-id: august-sandbox-425102-m1
-              serviceAccount: "{\"type\":\"service_account\",\"project_id\":\"august-sandbox-425102-m1\",\"private_key_id\":\"db72afe0c82cbc96072dbe129e9e8f4798356f33\",\"private_key\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDB3eQxeaqgjgNa\\nlCkOb0J1x63zhtg2d/7VIOesaic7yA4IuNptmub5wfut7/euVdFjDpNxoZhQiLu7\\nOYK2KkSjDN0BiqhKU17ySiVxm2urDmGpN6oOtat3pynA/KSWUfO9cEbGhMRSnXKF\\n6pUoC843m+97BSu7b+ie8CfidqW9lWtgltexmYOo2MGq7rGd6sKGqFu1QZzeumhQ\\nTq0T3Yi/9TUEIvnKJNCcylAAEmUoFGomFfRysMHYRjbEERpTHfQB5KIFMgn5ry0h\\nit6PPMJuPm6nJfGk/qIibxg7DjOkjGCnT6TKfw0hYWEYKO8yCxqSQGknwZE1YEon\\nTPdDc5X3AgMBAAECggEAHOrr7+lVvJnnrCovhESvpYFB1EfdQSVdsLg2IS9lvMgW\\n4nwtsMMLXbPuxmo7XW4q9oX6aQJmsD9FFCSm97nkVRdFHBwXsEaGrMjHPw6k3SDJ\\ntoO5bR+c0mialNEv/RrVAFaavV/ufOLuw0T+N2P+Fai/7G9qr4x+Jr8XOUjjaMd6\\nL4C5bdFdUKpXrFngSrgKzrL3bK/hHIrIVvQAbRaWiGRgOJmnW1izs+98PlZILmNG\\natZiHJm+2R0tG7k1fA7DUY87VcneHJ3QsVOs7ZZNVAVFCyv7/0hzXYbr5DFvoMa7\\nKdWnJE+wSGPKKIPcSB+tBCGdxfIuGGamOTPw4i3ygQKBgQDgEtTMHEzqJ+63tJeh\\nAxQpglMVecQch0tJfvaqTmbV257YTkl2N1DDyl4cF2oYhyT8k21pp7pTwlF8Zipi\\n7lpQDqb3zUWgq+Pc0SlEuq4CYVL3xL3qyCTgXrz1vn1DlX5fKhcDpRUaeYx0so4+\\nLtguBdRVUW4ps2zowiMRgp6ItwKBgQDdfUF1M1ZYu4Eqq3Jub7mV7v8JJ6HWXXW/\\nuHKx1Q224/JqKaC0qpQtc8suF1PC5mGX0a3rr9hJBEderajzv64+gAuUa9SZztAk\\nPtftOwOyanIeYqeG6ZVdStv9Iatq/qSp9utQ4eps7nvPgQ6Vxybz4tU/tnK5NL98\\nmV5SkVmcwQKBgBtdsWeMPUiLv/fnsm0Tty6qoAMLcAwb6fH785wxHxYXUHsSdJ5f\\nexmuaXf81BRSzQ2b48z3kyYPoWwT/jE+8wC8CWBSTaKl25poYSXntsDLqhpgiOFX\\nuEk+yM0qipnqdBijR1RGoSEunxzRgdXOWtCkHZ6d51poc3Cp5SaKUVpZAoGAICkL\\n1CS8KO4w9y0l1HtMi0TEq2Oh0CqJ6mix3rh84U1/6YJZ32HVWjQyEGM6ulYRXaYI\\nhuxlj1SbuFem7J2sg068X7S4jgzFlD27xKqJAuMJ5veUM7a/BWjVQJAe/84xwqwj\\nxv7Gt0J5n8uxfnYIZelN5Y5sYhASrdjnJT4NsQECgYBXOc+p+UDy0F8Z8fvlLs5h\\nUzzFhjNo65SmQMK7SKmGgbtXk+REt82hkQDk8n/OXUWO2s61uetkoMLLBUiMy0Sn\\nRLkq9GIe7SClzke/6JD8ORyXCuo6G8jOVRwuh2wln3s94C64hyyiA2/kMNF7qwgu\\nDUF8ry49BlJp2b6I/hUZoQ==\\n-----END PRIVATE KEY-----\\n\",\"client_email\":\"kestra-internal-storage-user@august-sandbox-425102-m1.iam.gserviceaccount.com\",\"client_id\":\"104889049525804360468\",\"auth_uri\":\"https://accounts.google.com/o/oauth2/auth\",\"token_uri\":\"https://oauth2.googleapis.com/token\",\"auth_provider_x509_cert_url\":\"https://www.googleapis.com/oauth2/v1/certs\",\"client_x509_cert_url\":\"https://www.googleapis.com/robot/v1/metadata/x509/kestra-internal-storage-user%40august-sandbox-425102-m1.iam.gserviceaccount.com\",\"universe_domain\":\"googleapis.com\"}"
+              serviceAccount: "$GOOGLE_STORAGE_SERVICE_ACCOUNT"
           queue:
             type: postgres
           tasks:
